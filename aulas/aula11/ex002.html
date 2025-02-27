@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qual país?</title>
+</head>
+<body>
+    <form action="">
+        Qual seu país? <input type="text" name="ipais" id="ipais">
+        <input type="submit" value="Enviar" onclick="verificar()">
+    </form>
+    <div id="txt">
+
+    </div>
+
+    <script>
+        function verificar(){
+            let txtp = document.querySelector('input#ipais')
+            let campo = document.querySelector('div#txt')
+
+            let pais = txtp.value
+
+            if (pais == 'Brasil'){
+                campo.innerHTML = 'Você é brasileiro!!'
+            } else{
+                campo.innerHTML = 'Você é estrangeiro!!!'
+            }
+        }
+    </script>
+    
+</body>
+</html>
